@@ -68,7 +68,7 @@ function EmployeeLogin() {
             {" "}
             Log in
           </button>
-          <p>You are agree to our terms and policies</p>
+          <p className="h6">You are agree to our terms and policies</p>
           <button
             type="button"
             className="btn btn-outline-secondary btn-lg"

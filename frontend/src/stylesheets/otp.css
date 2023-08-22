@@ -1,0 +1,21 @@
+.card {
+    width: 350px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+}
+
+.otp {
+    background: rgba(252, 252, 252, 0.349);
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0 1rem 2rem .2rem  rgba(67, 67, 67, 0.412);
+    transition: 0.4s ease-in-out;
+}
+
+.otp:hover {
+    box-shadow: 0 0 3rem 1rem rgba(67, 67, 67, 0.737);
+    color :black;
+    background: rgba(255, 255, 255, 0.79);
+}

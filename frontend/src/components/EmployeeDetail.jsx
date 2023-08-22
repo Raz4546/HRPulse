@@ -25,7 +25,7 @@ function EmployeeDetail() {
     <div className="employee-page">
       <div className="d-flex justify-content-center flex-column align-items-center mt-3">
         <img
-          src={`http://localhost:8081/images/${
+          src={`http://localhost:8081/public/images/${
             employee.image || "default.jpg"
           }`}
           alt=""

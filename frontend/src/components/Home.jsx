@@ -5,6 +5,8 @@ function Home() {
   const [adminCount, setAdminCount] = useState();
   const [employeeCount, setEmployeeCount] = useState();
   const [salary, setSalary] = useState();
+  const [adminList, setAdminList] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -27,7 +29,15 @@ function Home() {
         setSalary(res.data[0].sumOfSalary);
       })
       .catch((err) => console.log(err));
+    axios
+      .get("http://localhost:8081/adminList")
+      .then((res) => {
+        setAdminList(res.data);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
   }, []);
+
   return (
     <div>
       <div className="p-3 d-flex justify-content-around mt-3">
@@ -62,18 +72,36 @@ function Home() {
       <div className="mt-4 px-5 pt-3">
         <h3>List of Admins</h3>
         <table className="table">
-          <thead>
-            <tr>
-              <th>Email</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Admin</td>
-              <td>Admin</td>
-            </tr>
-          </tbody>
+          {loading ? (
+            <div className="d-flex justify-content-center">
+              <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          ) : (
+            <>
+              <thead>
+                <tr>
+                  <th>Email</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {adminList && Array.isArray(adminList) ? (
+                  adminList.map((admin, index) => (
+                    <tr key={index}>
+                      <td>{admin.email}</td>
+                      <td>Action</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="2">No admins available</td>
+                  </tr>
+                )}
+              </tbody>
+            </>
+          )}
         </table>
       </div>
     </div>

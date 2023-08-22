@@ -1,12 +1,12 @@
 .loginPage {
-    background: url('Images/emp.jpg');
-    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url("Images/emp.jpg");
+    background: url('Images/logo.jpg');
+    background: linear-gradient(rgba(246, 246, 246, 0.778), rgba(109, 22, 22, 0.285)), url("Images/logo.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 120%;
 }
 
 .loginForm {
-    background-color: rgba(1, 32, 93, 0.6);
+    background: linear-gradient(rgba(166, 38, 38, 0.325), rgba(163, 162, 162, 0.379));
     color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

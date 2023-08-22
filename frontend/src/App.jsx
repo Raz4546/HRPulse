@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
@@ -12,6 +12,9 @@ import EmployeeLogin from "./components/EmployeeLogin";
 import EmployeeDetail from "./components/EmployeeDetail";
 
 function App() {
+  const [page, setPage] = useState("login");
+  const [email, setEmail] = useState();
+  const [otp, setOtp] = useState();
   return (
     <Router>
       <Routes>

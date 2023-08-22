@@ -11,7 +11,7 @@ const app = express();
 app.use(
   cors({
     origin: ["http://localhost:5173"],
-    methods: ["POST", "GET", "PUT"],
+    methods: ["POST", "GET", "PUT","DELETE"],
     credentials: true,
   })
 );
@@ -119,10 +119,15 @@ const verifyUser = (req, res, next) => {
 
 app.post("/create", upload.single("image"), (req, res) => {
   const sql =
-    "INSERT INTO employee (`name`,`email`,`password`, `address`, `salary`,`image`) VALUES (?)";
+    "INSERT INTO employee (`id`, `name`, `email`, `password`, `address`, `salary`, `image`) VALUES (?, ?, ?, ?, ?, ?, ?)";
   bcrypt.hash(req.body.password.toString(), 10, (err, hash) => {
-    if (err) return res.json({ Error: "Error in hashing password" });
+    if (err) {
+      console.error("Error in hashing password:", err);
+      return res.json({ Error: "Error in hashing password" });
+    }
+    const id = req.body.id || null;
     const values = [
+      id,
       req.body.name,
       req.body.email,
       hash,
@@ -130,8 +135,13 @@ app.post("/create", upload.single("image"), (req, res) => {
       req.body.salary,
       req.file.filename,
     ];
-    con.query(sql, [values], (err, result) => {
-      if (err) return res.json({ Error: "Inside singup query" });
+
+    con.query(sql, values, (err, result) => {
+      if (err) {
+        console.error("Error inserting data into MySQL:", err);
+        return res.json({ Error: "Error inserting data into MySQL" });
+      }
+
       return res.json({ Status: "Success" });
     });
   });
@@ -219,6 +229,8 @@ app.get("/logout", (req, res) => {
   res.clearCookie("token");
   return res.json({ Status: "Success" });
 });
+
+
 
 app.listen(8081, () => {
   console.log("Running");

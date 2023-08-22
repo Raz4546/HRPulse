@@ -59,8 +59,6 @@ function Home() {
           </div>
         </div>
       </div>
-
-      {/* List of admin  */}
       <div className="mt-4 px-5 pt-3">
         <h3>List of Admins</h3>
         <table className="table">

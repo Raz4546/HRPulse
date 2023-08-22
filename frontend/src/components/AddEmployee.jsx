@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 function AddEmployee() {
   const [data, setData] = useState({
+    id: "",
     name: "",
     email: "",
     password: "",
@@ -16,6 +17,7 @@ function AddEmployee() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formdata = new FormData();
+    formdata.append("id", data.id);
     formdata.append("name", data.name);
     formdata.append("email", data.email);
     formdata.append("password", data.password);
@@ -34,7 +36,7 @@ function AddEmployee() {
       <h2>Add Employee</h2>
       <form className="row g-3 w-50" onSubmit={handleSubmit}>
         <div className="col-12">
-          <label for="inputName" className="form-label">
+          <label htmlFor="inputName" className="form-label">
             Name
           </label>
           <input
@@ -47,7 +49,20 @@ function AddEmployee() {
           />
         </div>
         <div className="col-12">
-          <label for="inputEmail4" className="form-label">
+          <label htmlFor="inputId" className="form-label">
+            ID
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="inputId"
+            placeholder="Enter ID"
+            autoComplete="off"
+            onChange={(e) => setData({ ...data, id: e.target.value })}
+          />
+        </div>
+        <div className="col-12">
+          <label htmlFor="inputEmail4" className="form-label">
             Email
           </label>
           <input
@@ -60,7 +75,7 @@ function AddEmployee() {
           />
         </div>
         <div className="col-12">
-          <label for="inputPassword4" className="form-label">
+          <label htmlFor="inputPassword4" className="form-label">
             Password
           </label>
           <input
@@ -72,7 +87,7 @@ function AddEmployee() {
           />
         </div>
         <div className="col-12">
-          <label for="inputSalary" className="form-label">
+          <label htmlFor="inputSalary" className="form-label">
             Salary
           </label>
           <input
@@ -85,7 +100,7 @@ function AddEmployee() {
           />
         </div>
         <div className="col-12">
-          <label for="inputAddress" className="form-label">
+          <label htmlFor="inputAddress" className="form-label">
             Address
           </label>
           <input
@@ -98,7 +113,7 @@ function AddEmployee() {
           />
         </div>
         <div className="col-12 mb-3">
-          <label className="form-label" for="inputGroupFile01">
+          <label className="form-label" htmlFor="inputGroupFile01">
             Select Image
           </label>
           <input

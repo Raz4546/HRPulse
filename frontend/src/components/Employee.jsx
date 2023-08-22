@@ -34,9 +34,10 @@ function Employee() {
   return (
     <div className="px-5 py-3">
       <div className="d-flex justify-content-center mt-2">
-        <h3>Employee List</h3>
+        <div className="display-3 text-body-primary">Employee List</div >
       </div>
-      <Link to="/create" className="btn btn-success">
+      <Link to="/create" className="btn btn-outline-primary  p-3">
+        <i className="bi bi-person-add me-2"></i>
         Add Employee
       </Link>
       <div className="mt-3">

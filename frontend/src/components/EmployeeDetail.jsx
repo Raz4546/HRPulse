@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+import "../stylesheets/employeeDetail.css";
 function EmployeeDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ function EmployeeDetail() {
     axios
       .get("http://localhost:8081/get/" + id)
       .then((res) => setEmployee(res.data.Result[0]))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("Error fetching employee data:", err));
   });
   const handleLogout = () => {
     axios
@@ -21,13 +22,16 @@ function EmployeeDetail() {
       .catch((err) => console.log(err));
   };
   return (
-    <div>
+    <div className="employee-page">
       <div className="d-flex justify-content-center flex-column align-items-center mt-3">
         <img
-          src={`http://localhost:8081/images/` + employee.image}
+          src={`http://localhost:8081/images/${
+            employee.image || "default.jpg"
+          }`}
           alt=""
           className="empImg"
         />
+
         <div className="d-flex align-items-center flex-column mt-5">
           <h3>Name: {employee.name}</h3>
           <h3>Email: {employee.email}</h3>

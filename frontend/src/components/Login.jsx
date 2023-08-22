@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../stylesheets/login.css";
+import "font-awesome/css/font-awesome.min.css";
 function Login() {
   const [values, setValues] = useState({
     email: "",
@@ -25,6 +26,9 @@ function Login() {
         }
       })
       .catch((err) => console.log(err));
+  };
+  const navigateToStart = () => {
+    navigate("/start");
   };
 
   return (
@@ -65,6 +69,13 @@ function Login() {
             Log in
           </button>
           <p>You are agree to our terms and policies</p>
+          <button
+            type="button"
+            className="btn btn-outline-secondary btn-lg"
+            onClick={navigateToStart}
+          >
+            <i className="bi bi-arrow-left"></i>
+          </button>
         </form>
       </div>
     </div>

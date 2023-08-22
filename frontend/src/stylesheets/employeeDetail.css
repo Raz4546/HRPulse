@@ -1,0 +1,6 @@
+.employee-page {
+    background: url('Images/logo.jpg');
+    background: linear-gradient(rgba(246, 246, 246, 0.778), rgba(109, 22, 22, 0.285)), url("Images/logo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}

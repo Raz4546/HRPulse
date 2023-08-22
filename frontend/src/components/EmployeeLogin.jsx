@@ -27,6 +27,9 @@ function EmployeeLogin() {
       })
       .catch((err) => console.log(err));
   };
+  const navigateToStart = () => {
+    navigate("/start");
+  };
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 loginPage">
@@ -66,6 +69,13 @@ function EmployeeLogin() {
             Log in
           </button>
           <p>You are agree to our terms and policies</p>
+          <button
+            type="button"
+            className="btn btn-outline-secondary btn-lg"
+            onClick={navigateToStart}
+          >
+            <i className="bi bi-arrow-left"></i>
+          </button>
         </form>
       </div>
     </div>

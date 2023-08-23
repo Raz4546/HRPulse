@@ -12,6 +12,7 @@ HRPulse is a comprehensive Human Resource Management System designed to streamli
 * Task Management: Assign tasks and monitor their progress.
 
 > [!IMPORTENT]
+
 > Prerequisites
 Before you begin, ensure you have met the following requirements:
 

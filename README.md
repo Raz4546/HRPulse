@@ -1,4 +1,4 @@
-HRPulse - Human Resource Management System
+💯 HRPulse - Human Resource Management System 💯
 HRPulse is a comprehensive Human Resource Management System designed to streamline HR operations and simplify employee management. It offers a user-friendly interface built with React and Bootstrap on the front end, while the back end is powered by Node.js and Express, with MySQL for data storage. The project also employs bcrypt for password encryption to ensure data security.
 
 Features
@@ -21,24 +21,24 @@ Installation
 
 1. Clone the repository:
 
-git clone https://github.com/Raz4546/HRPulse.git
+`git clone https://github.com/Raz4546/HRPulse.git`
 
 2. Install the project dependencies:
 
-cd HRPulse
-npm install
+`cd HRPulse
+npm install`
 
 3. Configure the database connection in /server/config/db.config.js.
 
 4. Start the development server:
 
-cd .\frontend\
-npm run dev
+`cd .\frontend\
+npm run dev`
 
 5. Start the backend server:
 
-cd .\backend
-npm start
+`cd .\backend
+npm start`
 
 
 Usage
@@ -49,10 +49,10 @@ Usage
 
 Contributing
 
-Contributions are welcome! Feel free to open issues and pull requests to enhance the project. Please adhere to the Contributing Guidelines.
+Contributions are welcome! Feel free to open issues and pull requests to enhance the project. Please adhere to the **__Contributing Guidelines__**.
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the __**LICENSE**__ file for details.
 
 Acknowledgments
-* Thanks to the open-source community for their contributions to the libraries and tools used in this project.
+* Thanks to the open-source community for their contributions to the libraries and tools used in this project. 😽

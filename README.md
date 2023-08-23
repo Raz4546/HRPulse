@@ -11,15 +11,14 @@ HRPulse is a comprehensive Human Resource Management System designed to streamli
 * Salary Management: Calculate and disburse employee salaries with precision.
 * Task Management: Assign tasks and monitor their progress.
 
-
-### Prerequisites
+> [!IMPORTENT]
+> Prerequisites
 Before you begin, ensure you have met the following requirements:
 
 * Node.js and npm installed on your machine.
 * MySQL database server set up with the necessary tables (database schema provided in the /database directory).
 
-[!IMPORTENT]
-Installation
+> Installation
 
 1. Clone the repository:
 

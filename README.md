@@ -11,7 +11,7 @@ HRPulse is a comprehensive Human Resource Management System designed to streamli
 * Salary Management: Calculate and disburse employee salaries with precision.
 * Task Management: Assign tasks and monitor their progress.
 
-> [!IMPORTANT] Prerequisites
+### Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 

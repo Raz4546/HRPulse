@@ -1,4 +1,5 @@
 💯 HRPulse - Human Resource Management System 💯
+
 HRPulse is a comprehensive Human Resource Management System designed to streamline HR operations and simplify employee management. It offers a user-friendly interface built with React and Bootstrap on the front end, while the back end is powered by Node.js and Express, with MySQL for data storage. The project also employs bcrypt for password encryption to ensure data security.
 
 Features

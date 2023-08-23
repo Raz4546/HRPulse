@@ -54,7 +54,8 @@ Before you begin, ensure you have met the following requirements:
 ### Contributing
 
 Contributions are welcome! Feel free to open issues and pull requests to enhance the project. 
-Collaborate with @TaliyaAtia1
+
+Collaborate with @taliyaatia1
 
 ### License
 This project is licensed under the MIT License - see the __**LICENSE**__ file for details.

@@ -8,7 +8,6 @@ HRPulse is a comprehensive Human Resource Management System designed to streamli
 * Employee Management: Easily add, edit, and delete employee records.
 * Leave Management: Efficiently manage employee leaves and track their usage.
 * Salary Management: Calculate and disburse employee salaries with precision.
-* Task Management: Assign tasks and monitor their progress.
 
 ### Prerequisites
 

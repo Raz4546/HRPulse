@@ -26,8 +26,8 @@ Before you begin, ensure you have met the following requirements:
 
 2. Install the project dependencies:
 
-`cd HRPulse
-npm install`
+`cd HRPulse`
+`npm install`
 
 3. Configure the database connection in /server/config/db.config.js.
 
@@ -38,8 +38,8 @@ npm run dev`
 
 5. Start the backend server:
 
-`cd .\backend
-npm start`
+`cd .\backend`
+`npm start`
 
 
 ### Usage

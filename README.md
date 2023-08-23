@@ -18,7 +18,8 @@ Before you begin, ensure you have met the following requirements:
 * Node.js and npm installed on your machine.
 * MySQL database server set up with the necessary tables (database schema provided in the /database directory).
 
-### Installation
+[!IMPORTENT]
+Installation
 
 1. Clone the repository:
 

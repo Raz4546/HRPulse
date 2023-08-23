@@ -40,7 +40,7 @@ Before you begin, ensure you have met the following requirements:
 
 5. Start the backend server:
 
-`cd .\backend`
+`cd .\backend\`
 
 `npm start`
 

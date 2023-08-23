@@ -11,7 +11,7 @@ function Login() {
     email: "",
     password: "",
   });
-  const { setEmail, setPage, email, setOTP } = useContext(RecoveryContext);
+  const { setEmail, email, setOTP } = useContext(RecoveryContext);
   const navigate = useNavigate();
   const [error, setError] = useState("");
 

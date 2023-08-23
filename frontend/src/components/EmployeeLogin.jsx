@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import "../stylesheets/employeeLogin.css";
+import React, { useState,useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { RecoveryContext } from "../App";
 
+
+import "../stylesheets/employeeLogin.css";
 function EmployeeLogin() {
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
   axios.defaults.withCredentials = true;
+  const { setEmail,email, setOTP } = useContext(RecoveryContext);
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   const [error, setError] = useState("");
@@ -30,7 +33,25 @@ function EmployeeLogin() {
   const navigateToStart = () => {
     navigate("/start");
   };
+  const handleResetPassword = (e) => {
+    e.preventDefault();
+    if (email) {
+      const OTP = Math.floor(Math.random() * 9000 + 1000);
+      console.log(OTP);
+      setOTP(OTP);
+      console.log(email);
+      axios
+        .post("http://localhost:8081/send_recovery_email", {
+          OTP,
+          recipient_email: email,
+        })
+        .then(() => navigate("/OTP"))
+        .catch(console.log);
+      return;
+    }
 
+    return alert("Please enter your email");
+  };
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 loginPage">
       <div className="p-3 rounded w-25 border loginForm">
@@ -45,7 +66,10 @@ function EmployeeLogin() {
               type="email"
               placeholder="Enter Email"
               name="email"
-              onChange={(e) => setValues({ ...values, email: e.target.value })}
+              onChange={(e) => {
+                setValues({ ...values, email: e.target.value });
+                setEmail(e.target.value);
+              }}
               className="form-control rounded-0"
               autoComplete="off"
             />
@@ -64,6 +88,13 @@ function EmployeeLogin() {
               className="form-control rounded-0"
             />
           </div>
+          <a
+            href="#"
+            onClick={(e) => handleResetPassword(e)}
+            className="btn btn-link btn-sm pl-10 mb-2"
+          >
+            Forgot password?
+          </a>
           <button type="submit" className="btn btn-success w-100 rounded-0">
             {" "}
             Log in

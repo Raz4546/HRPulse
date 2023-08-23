@@ -30,8 +30,15 @@ function App() {
           <Route path="/employeeEdit/:id" element={<EditEmployee />} />
         </Route>
         <Route path="/start" element={<Start />} />
-        <Route path="/employeeLogin" element={<EmployeeLogin />} />
         <Route path="/employeedetail/:id" element={<EmployeeDetail />} />
+        <Route
+          path="/employeeLogin"
+          element={
+            <RecoveryContext.Provider value={{ email, setEmail, otp, setOTP }}>
+              <EmployeeLogin />
+            </RecoveryContext.Provider>
+          }
+        />
         <Route
           path="/login"
           element={

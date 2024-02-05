@@ -22,10 +22,10 @@ app.use(cookieParser());
 app.use(express.static("public"));
 
 const con = mysql.createConnection({
-  host: "",
-  user: "",
-  password: "",
-  database: "",
+  host: "localhost",
+  user: "root",
+  password: "root123",
+  database: "employee_database",
 });
 
 const storage = multer.diskStorage({

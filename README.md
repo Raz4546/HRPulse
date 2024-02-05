@@ -54,7 +54,7 @@ Before you begin, ensure you have met the following requirements:
 Contributions are welcome! Feel free to open issues and pull requests to enhance the project. 
 
 ### License
-This project is licensed under the MIT License - see the __**LICENSE**__ file for details.
+This project is licensed under the [MIT License](./LICENSE) - see the [LICENSE](./LICENSE) file for details.
 
 ### Acknowledgments
 * Thanks to the open-source community for their contributions to the libraries and tools used in this project. 😽

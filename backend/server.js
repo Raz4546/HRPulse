@@ -57,13 +57,13 @@ function sendEmail({ recipient_email, OTP }) {
     let transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "hrpulse4546@gmail.com",
-        pass: "mrnregrrayrhhzxm",
+        user: "example@gmail.com",
+        pass: "*********",
       },
     });
 
     const mail_configs = {
-      from: "hrpulse4546@gmail.com",
+      from: "example@gmail.com",
       to: recipient_email,
       subject: "HRPulse Password Recovery",
       html: `<!DOCTYPE html>

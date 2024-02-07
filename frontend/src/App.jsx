@@ -22,13 +22,20 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard />}>
+        {/* Route with nested routes */}
+        <Route
+          path="/"
+          element={<Dashboard />}
+        >
+          {/* Child routes */}
           <Route index element={<Home />} />
           <Route path="/employee" element={<Employee />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/create" element={<AddEmployee />} />
           <Route path="/employeeEdit/:id" element={<EditEmployee />} />
         </Route>
+
+        {/* Other top-level routes */}
         <Route path="/start" element={<Start />} />
         <Route path="/employeedetail/:id" element={<EmployeeDetail />} />
         <Route
